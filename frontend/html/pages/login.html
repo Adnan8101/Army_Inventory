@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/common/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <div class="logo-container">
+                <img src="../../images/logo.png" alt="Eagle Logo" class="logo">
+            </div>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="userId" name="userId" placeholder="User ID" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Forgot Password? <a href="/html/pages/forgot-password.html">Click here</a></p>
+            <p>Don't have an account? <a href="/html/pages/register.html">Register here</a></p>
+            <div id="loginMessage"></div>
+        </div>
+    </div>
+
+    <!-- Pop-up for success -->
+    <div id="popup-success" class="popup success">
+        <div class="icon success-icon">&#10004;</div>
+        <button class="close-btn" onclick="closePopup('popup-success')">✕</button>
+        <h3>SUCCESS</h3>
+        <p></p>
+        <button class="btn" onclick="closePopup('popup-success')">Continue</button>
+    </div>
+
+    <!-- Pop-up for error -->
+    <div id="popup-error" class="popup error">
+        <div class="icon error-icon">&#10060;</div>
+        <button class="close-btn" onclick="closePopup('popup-error')">✕</button>
+        <h3>ERROR!</h3>
+        <p></p>
+        <button class="btn error-btn" onclick="closePopup('popup-error')">Try Again</button>
+    </div>
+
+    <script src="../../js/login.js"></script>
+</body>
+</html>
